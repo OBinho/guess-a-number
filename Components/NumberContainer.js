@@ -1,0 +1,39 @@
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+
+import Colors from '../Constants/Colors';
+
+const NumberContainer = props => {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.number}>{props.children}</Text>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        borderWidth: 2,
+        borderColor: Colors.primary,
+        backgroundColor: Colors.primary,
+        padding: 10,
+        borderRadius: 10,
+        marginVertical: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 5,
+        shadowColor: 'black',
+        shadowRadius: 8,
+        shadowOpacity: 0.7,
+        shadowOffset: {height: 2, width: 2}
+    },
+    number: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textShadowColor: 'black',
+        textShadowRadius: 2
+    }
+});
+
+export default NumberContainer;
